@@ -5,7 +5,7 @@ public class Process {
 	public int cpuTime;
 	public int ioTime;
 	//******************
-	//for state, -1=waiting, 0=ready, 1=running, 2=blocked, 3=finished
+	//for state, 0=ready, 1=running, 2=blocked, 3=finished
 	public int state; 
 	public int totalIoTime;
 	public int tempwait;

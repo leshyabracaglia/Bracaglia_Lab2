@@ -1,15 +1,15 @@
 import java.util.NoSuchElementException;
 
-public class LinkedList implements Cloneable {
-
+public class Queue implements Cloneable{
+	
 	private Node first;
 	private Node position = null;
 	
-	public LinkedList(){
+	public Queue(){
 		first = null;
 	}
 	
-	public LinkedList(Process c){
+	public Queue(Process c){
 		this.addFirst(c);
 	}
 	
@@ -26,7 +26,6 @@ public class LinkedList implements Cloneable {
 	
 	public void addFirst(Process c){
 		Node newnode = new Node(c);
-		newnode.proc = c;
 		newnode.next = null;
 		this.first = newnode;
 		position = newnode;
@@ -54,7 +53,7 @@ public class LinkedList implements Cloneable {
 	}
 	
 	public String print(){
-		String s = "\nLinkedList:";
+		String s = "\nQueue:";
 		Node counter = this.first;
 		if(counter==null){
 			return "";
@@ -74,5 +73,7 @@ public class LinkedList implements Cloneable {
 
 	    return super.clone();
 	}
+	
+	
+	
 }
-
